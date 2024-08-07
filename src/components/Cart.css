@@ -1,0 +1,89 @@
+.board {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 50px;
+  flex-wrap: wrap;
+}
+
+.column {
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  padding: 10px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.task {
+  background-color: #ffffff;
+  border-radius: 3px;
+  padding: 8px;
+  margin-bottom: 8px;
+  width: 100%;
+  box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+}
+
+.add-task,
+.add-column {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-task input,
+.add-column input {
+  padding: 5px;
+  margin-bottom: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.add-task button {
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #e0e0e0; 
+  color: #333; 
+  width: 100%;
+}
+
+.add-column button {
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #e0e0e0; 
+  color: #333; 
+}
+
+.add-task button:hover,
+.add-column button:hover {
+  background-color: #d0d0d0; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .board {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .column {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .board {
+    padding: 20px;
+  }
+
+  .column {
+    width: 100%;
+  }
+}
